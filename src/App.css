@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Spectral', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    background-image: linear-gradient(#DFF6FF, #86C6F4, #5D8BF4, #051367);
+    min-height: 80vh;
+    width: 400px;
+    margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    display: flex;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.crossed {
+    text-decoration: line-through 2px red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul, li {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Spectral', serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #25316D;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    width: 70%;
+    font-size: 16px;
+    font-family: 'Spectral', serif;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #86C6F4;
+}
+
+.add {
+    margin-top: 25px;
+    background: #FEF5AC;
+    color: #25316D;
+}
+
+.delete {
+    margin-bottom: 50px;
+    background-color: #25316D;
+    color: #FEF5AC;
+}
+
+input {
+    padding: 8px 4px;
+    width: 80%;
+    border: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    animation-name: spin;
+    animation-duration: 25000ms;
+    animation-timing-function:ease; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+@media all and (max-width: 820px) {
+    .app {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .mainImage {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .list {
+        font-size: 35px;
+    }
+
+    .btn {
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width: 415px) {
+    .app {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .mainImage {
+        width: 150px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+    .list {
+        font-size: 25px;
+    }
 }

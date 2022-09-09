@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import sunPhoto from './sunny.png';
+import moonPhoto from './crescent-moon.png';
+import { ToDoList } from './ToDoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='container'>
+      <img className='mainImage circle' src={ sunPhoto } alt="sun" width="200px" />
+      </div>
+      <div className='container'>
+      <h1>To Do List</h1>
+      </div>
+      <ToDoList />
+      <div className='container'>
+      <img className='mainImage' src={ moonPhoto} alt="moon" width="200px" />
+      </div>
     </div>
   );
 }
